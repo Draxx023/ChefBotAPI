@@ -13,6 +13,9 @@ app.use(cors());
 connectDB();
 
 // routes
+app.get('/', (req, res) => {
+    res.json({ message: 'ok' });
+  });
 app.use('/api', require('./router/router'));
 
 app.listen(PORT, () => {
